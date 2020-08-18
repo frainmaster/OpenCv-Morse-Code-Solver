@@ -58,7 +58,7 @@ class MorseImageDecoder(object):
 		# cv2.waitKey(0)
 		# cv2.destroyAllWindows()
 
-		contour = cv2.findContours(erodeImage.copy(),cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)[1]
+		contour = cv2.findContours(erodeImage.copy(),cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)[0]
 		copyImage = np.zeros((self.image.shape[0],self.image.shape[1],3),dtype='uint8')
 		# cv2.drawContours(copyImage,contour,-1,(0,0,255),1)
 		# cv2.imshow('Con Image',copyImage)	
